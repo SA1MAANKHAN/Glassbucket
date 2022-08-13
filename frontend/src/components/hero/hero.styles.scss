@@ -1,0 +1,44 @@
+.hero {
+    height: 60vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+
+    .imageCarousel {
+        // to fix catogories mouse leave event
+        pointer-events: none;
+    }
+
+    .hero-text {
+        // to fix catogories mouse leave event
+        pointer-events: none;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: calc(2vh + 2vw);
+        text-align: center;
+        z-index: 3;
+        color: white;
+    }
+    .carouselOverlay {
+        // to fix catogories mouse leave event
+        pointer-events: none;
+
+        position: absolute;
+        height: 60vh;
+        width: 100vw;
+        z-index: 2;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.388);
+    }
+}
+
+.carouselImage {
+    height: 60vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}

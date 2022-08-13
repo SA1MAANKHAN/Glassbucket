@@ -1,0 +1,28 @@
+.catagories {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    height: 50vh;
+    width: 100vw;
+
+    .catagory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        height: 100%;
+        width: 100%;
+
+        transition: all 0.5s ease;
+        font-size: calc(1vh + 1vw);
+        font-weight: 500;
+
+        &:hover {
+            background-color: rgba(237, 237, 237, 0.672);
+            font-size: calc(1.2vh + 1.2vw);
+        }
+    }
+}

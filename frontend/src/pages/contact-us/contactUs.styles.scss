@@ -1,0 +1,174 @@
+.contact {
+    height: 90vh;
+
+    background-color: rgba(236, 235, 235, 0.69);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: calc(2vh + 2vw);
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: 300;
+    }
+
+    .contact__content {
+        height: 70vh;
+        width: 90vw;
+
+        border-radius: calc(1vh + 1vw);
+
+        display: flex;
+
+        background-color: white;
+
+        .contact__content__left {
+            border-radius: calc(1vh + 1vw);
+
+            width: 40%;
+
+            padding: calc(1.5vh + 1.5vw);
+
+            background-color: #3e2093;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            flex-direction: column;
+
+            color: white;
+
+            h1 {
+                text-align: center;
+            }
+
+            h3 {
+                width: 80%;
+                font-weight: 300;
+                text-align: left;
+            }
+
+            .contact__infos {
+                margin-top: calc(2vh + 2vw);
+                width: 100%;
+
+                .contact__info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 80%;
+
+                    h2 {
+                        font-weight: 300;
+                    }
+
+                    .contact__icons {
+                        font-size: calc(1.2vh + 1.2vw);
+                        color: #f0959d;
+                    }
+                }
+            }
+        }
+
+        .contact__content__right {
+            background-color: white;
+            border-radius: 0 calc(1vh + 1vw) calc(1vh + 1vw) 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            width: 60%;
+
+            .contact__upper__inputs {
+                width: 90%;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                place-content: center;
+
+                .contact__upper__input {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    margin: calc(1vh + 1vw);
+
+                    label {
+                        color: gray;
+                        font-size: calc(0.6vh + 0.6vw);
+                    }
+
+                    input {
+                        border: none;
+                        border-bottom: 2px solid darkgray;
+
+                        font-size: calc(1vh + 1vw);
+
+                        outline: none;
+
+                        padding: calc(1vh + 1vw) calc(0.4vh + 0.4vw);
+
+                        &:focus {
+                            border-bottom: 3px solid #3e2093;
+                        }
+                    }
+                }
+            }
+            .contact__lower__input {
+                width: 90%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+                box-sizing: border-box;
+
+                padding: calc(1vh + 1vw);
+
+                label {
+                    color: gray;
+                    font-size: calc(0.6vh + 0.6vw);
+                }
+
+                input {
+                    border: none;
+                    border-bottom: 2px solid darkgray;
+
+                    font-size: calc(1vh + 1vw);
+
+                    outline: none;
+
+                    width: 90%;
+
+                    padding: calc(1vh + 1vw) calc(0.4vh + 0.4vw);
+
+                    &:focus {
+                        border-bottom: 3px solid #3e2093;
+                    }
+                }
+            }
+
+            button {
+                padding: calc(1vh + 1vw) calc(1.4vh + 1.4vw);
+                background-color: #3e2093;
+                color: white;
+                font-weight: 800;
+                font-size: calc(1vh + 1vw);
+
+                border-radius: calc(0.5vh + 0.5vw);
+
+                border: none;
+            }
+        }
+    }
+}
