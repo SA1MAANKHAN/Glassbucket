@@ -1,4 +1,10 @@
 .catagories {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 10vh;
+
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -22,7 +28,7 @@
 
         &:hover {
             background-color: rgba(237, 237, 237, 0.672);
-            font-size: calc(1.2vh + 1.2vw);
+            font-size: calc(1.05vh + 1.05vw);
         }
     }
 }

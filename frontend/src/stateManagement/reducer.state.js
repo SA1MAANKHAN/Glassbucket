@@ -1,7 +1,8 @@
 import CONSTANTS from "../utils/constants";
 
 export const initialState = {
-    showCatagories: false
+    showCatagories: false,
+    catagories: ["Eye Glasses", "Computer Glasses", "Contact Lenses", "Kids Glasses", "Sunglasses", "Power Sunglasses", "Color Contact Lens", "Reading Glasses", "Programer Lenses"]
 };
 
 const reducer = (state, action) => {

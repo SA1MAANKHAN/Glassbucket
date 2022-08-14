@@ -1,47 +1,44 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useStateValue } from '../../stateManagement/stateProvider.state';
-import CONSTANTS from '../../utils/constants';
-import { titleToSlug } from '../../utils/functions';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useStateValue } from "../../stateManagement/stateProvider.state";
+import CONSTANTS from "../../utils/constants";
+import { titleToSlug } from "../../utils/functions";
 
 // styles
 import "./catagories.styles.scss";
 
-const catagories = ["Eye Glasses", "Computer Glasses", "Contact Lenses", "Kids Glasses", "Sunglasses", "Power Sunglasses", "Color Contact Lens", "Reading Glasses", "Programer Lenses"];
-
 export default function Catagories() {
+  
+  const [{ catagories }, dispatch] = useStateValue();
 
-    const [{}, dispatch] = useStateValue();
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
+  function navigateToCatagory(e) {
+    const slug = titleToSlug(e.target.textContent);
 
-    function navigateToCatagory(e){
+    navigate(`/catagory/${slug}`);
+  }
 
-      const slug = titleToSlug(e.target.textContent);
-
-      navigate(`/catagory/${slug}`);
-    
-    }
-
-    function hideCatagoiresMenu() {
-      dispatch({
-        type: CONSTANTS.ACTION_TYPES.SHOW_CATAGORIES,
-        payload: false,
-      });
-
-    }
+  function hideCatagoiresMenu() {
+    dispatch({
+      type: CONSTANTS.ACTION_TYPES.SHOW_CATAGORIES,
+      payload: false,
+    });
+  }
 
   return (
     <div onMouseLeave={hideCatagoiresMenu} className="catagories">
-      {catagories.map((catagory) => (
-        <div
-          className="catagory"
-          key={Date.now + Math.random()}
-          onClick={navigateToCatagory}
-        >
-          {catagory}
-        </div>
-      ))}
+      {catagories.length
+        ? catagories.map((catagory) => (
+            <div
+              className="catagory"
+              key={Date.now + Math.random()}
+              onClick={navigateToCatagory}
+            >
+              {catagory}
+            </div>
+          ))
+        : ""}
     </div>
   );
 }

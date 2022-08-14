@@ -10,8 +10,8 @@ import { useStateValue } from "../../stateManagement/stateProvider.state";
 // hero images
 import Img1 from "../../assets/images/hero-section/img1.png";
 import Img2 from "../../assets/images/hero-section/img2.png";
-import Img3 from "../../assets/images/hero-section/img3.png";
-import Img4 from "../../assets/images/hero-section/img4.png";
+import Img3 from "../../assets/images/hero-section/img3.jpeg";
+import Img4 from "../../assets/images/hero-section/img4.jpeg";
 
 // styles
 import "./hero.styles.scss";
@@ -19,11 +19,9 @@ import "./hero.styles.scss";
 import Catagories from "../catagories/catagories.component";
 
 function Hero() {
-  const [{ showCatagories }, dispatch] = useStateValue();
 
   return (
     <>
-      {showCatagories ? <Catagories /> : ""}
       <div className="hero">
         <div className="imageCarousel">
           <Carousel
